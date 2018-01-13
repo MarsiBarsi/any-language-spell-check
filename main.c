@@ -18,13 +18,13 @@ FILE *check_for_existence_of_a_file() {
             status = menu_for_file_existence();
         }
     }
-
+    return NULL;
 }
 
 int menu_for_file_existence() {
     int local_status;
     printf("● Select an action:\n1.Try again\n0.Exit\n");
-    for(;;) {
+    while(1) {
         scanf("%d",&local_status);
         if (local_status == 1) { return 1; }
         else if (local_status == 0) { return 0; }
@@ -33,6 +33,7 @@ int menu_for_file_existence() {
         }
     }
 }
+
 
 int main()
 {
@@ -47,8 +48,6 @@ int main()
         fgets(inFile,256,FILE);
         printf("the file has been successfully opened and contains: %s",inFile);
         return 1;
-
-
     }
 
     return 0;
