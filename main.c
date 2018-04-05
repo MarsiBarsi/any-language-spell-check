@@ -10,7 +10,9 @@
 // Вспомогательные функции:
 
 int not_a_stop_symbol(char sym) {
-	if ((sym == ' ') || (sym == '.') || (sym == ',') || (sym == '!') || (sym == '?') || (sym == 0) || (sym == ':') || (sym == '-') || (sym == '\0')) {
+	if ((sym == ' ') || (sym == '.') || (sym == ',') || (sym == '!') ||
+	    (sym == '?') || (sym == 0) || (sym == ':') ||
+	    (sym == '-') || (sym == '\0')) {
 		return 0;
 	}
 	return 1;
